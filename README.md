@@ -30,6 +30,10 @@
 - ✅ **TypeScript** - Full type safety and modern development
 - ✅ **Git Integration** - Automatic .gitignore updates and backups
 
+
+https://github.com/user-attachments/assets/5b407973-4148-49e3-872f-ce3f9a3161f8
+
+
 ### Report Issues
 
 Found a bug? Please report it at [GitHub Issues](https://github.com/Matt-Dionis/claude-code-configs/issues)
