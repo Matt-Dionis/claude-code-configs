@@ -1,7 +1,7 @@
 {
   "name": "claude-config-composer",
   "version": "1.0.0",
-  "description": "Generate production-ready Claude Code configurations for popular frameworks and tools. Beta release - please report issues.",
+  "description": "Generate production-ready Claude Code configurations for popular frameworks and tools.",
   "main": "dist/cli.js",
   "bin": {
     "claude-config-composer": "./dist/cli.js",
@@ -37,7 +37,7 @@
     "configuration-generator",
     "development-stack"
   ],
-  "author": "Matt Dionis <mattdionis@gmail.com>",
+  "author": "Matt Dionis <matt@nlad.dev>",
   "license": "MIT",
   "homepage": "https://github.com/Matt-Dionis/claude-code-configs#readme",
   "repository": {
