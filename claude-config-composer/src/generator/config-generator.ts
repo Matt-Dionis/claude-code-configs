@@ -168,7 +168,13 @@ export class ConfigGenerator {
       const mergedHooks = this.componentMerger.mergeHooks(hookGroups);
 
       // Process hooks (directory already created above)
+      let writtenHooksCount = 0;
       for (const hook of mergedHooks) {
+        // Skip hooks.json as it's a special configuration file that shouldn't be copied
+        if (hook.name === 'hooks.json') {
+          continue;
+        }
+        
         // Validate and sanitize hook data
         const validatedHook = InputValidator.validateHook(hook);
         const hookName =
@@ -177,8 +183,9 @@ export class ConfigGenerator {
         // Write directly to hooksDir
         const hookPath = path.join(hooksDir, hookName);
         await fs.writeFile(hookPath, hookContent);
+        writtenHooksCount++;
       }
-      if (spinner) spinner.text = `${steps[currentStep]} (${mergedHooks.length} hooks)`;
+      if (spinner) spinner.text = `${steps[currentStep]} (${writtenHooksCount} hooks)`;
       if (spinner) spinner.succeed();
 
       // Merge and write settings.json to .claude/
